@@ -46,3 +46,17 @@ Consult the GraphQL schema for all the available fields.
 5. The response from `Elastic` is checked thoroughly for problems. They are logged and the results and errors are mapped to a typed object.
 6. `SearchIngestService` returns a mapped result object, consisting of all the successes and problems related to the ingest process.
 Partial ingested data can occur. Errored documents can be re-ingested in a later stage if the problem was not blocking.
+
+## Ranking
+[Function Score Query](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/query-dsl-function-score-query.html) is used to add custom scoring to the results based on visibility. This give us great flexibility over the query you execute at runtime. **We can choose different scoring function at runtime, based on the user, the context, etc.**
+
+### Boosting criteria
+
+`visiblity=active` adds a weight of `2` to the document</br>
+`visiblity=demo` adds a weight of `1` to the document.</br>
+`visiblity=archived` adds a weight of `0` to the document.</br>
+`NOT EXIST visiblity` adds a weight of `1` to the document.
+
+**No other fields are boosted.**
+It sounds logical to boost fields like `displayName`, `tagline` but **they are boosted by default using a [field-length norm](https://www.elastic.co/guide/en/elasticsearch/guide/current/scoring-theory.html#field-norm)**.
+Fields with more terms like `description`, `vision`, etc. have a normalized score of `1/sqrt(terms)` which naturally punishes fields with more text.
