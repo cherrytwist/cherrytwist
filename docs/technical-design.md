@@ -49,18 +49,12 @@ The following diagram shows at a high level the key entities in use within Alkem
 This logical data model attempts to keep to a minimum, at least initially, the set of entities that are represented in the platform, while still being able to reflect the types described in the conceptual design. The rationale for this is to keep the approach as general as possible, allowing further innovation how Challenges are managed. 
 
 The key entities in the model are:
-*   **Challenge:**
-    * **Space**: where Challenges are hosted, facilitated by a hosting organization. 
-    * **Challenge**: the Challenge itself, including the shared understanding, community and tracked collaboration. 
-    * **Opportunity**: a potential significant step towards the desired outcomes of the Challenge. Likely that multiple Opportunities are identified in the context of the Challenge, each with their own lifecycle & that need to be ranked / prioritised. 
-    * **Project**: a defined outcome, formalised as an agreement between parties collaborating in the context an Opportunity. Potentially multiple projects needed to deliver an Opportunity.
+*   **Space:**: The combination of the change to be achieved with the community contributing to that change, and collaboration towards the change. 
 *   **Community**:
     *   **User**: The primary way of interacting with the platform    
     *   **UserGroup**: To allow the aggregation of users into groups, which may or may not have a focal point that is in charge of the group
     *   **Organization**: To reflect legal entities that interact with the platform via one or more users.   
-*   **Context**: 
-    * **Context**: The shared understanding, at either Space, Challenge or Opportunity level. 
-    * **Ecosystem Model**: A representation (model) of the different types of **ActorGroups + Actors**, plus later the value types each receives / brings into the Ecosystem. 
+*   **Context**: The change to be achieved.
 *   **Collaboration**: 
     * **Callouts**: How to engage the members of a Community to get their wisdom on issues faced, solutions, others to engage, network etc.  
     * **Posts**: The posts to allow members to contribute
