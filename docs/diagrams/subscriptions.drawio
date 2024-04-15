@@ -1,0 +1,108 @@
+<mxfile host="Electron" modified="2024-01-25T11:15:34.895Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.21 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="ZB3cusBOzwPMiNCHNsNL" version="22.1.21" type="device">
+  <diagram name="Subscriptions" id="MRnfxQKDurDMuoabgHoY">
+    <mxGraphModel dx="2068" dy="1114" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-0" />
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-1" parent="dUI4cDzIz1VOxFGTC87Q-0" />
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-4" value="Alkemio Subscriptions + Benefit Management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
+          <mxGeometry x="226" y="30" width="414.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-11" value="" style="group" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1" connectable="0">
+          <mxGeometry x="558" y="236" width="247" height="383" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-12" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" parent="dUI4cDzIz1VOxFGTC87Q-11" vertex="1">
+          <mxGeometry width="247" height="383" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-13" value="&lt;b&gt;SubscriptionRule&lt;/b&gt;&lt;br&gt;- Type: PlusPlan-2024-q1&lt;br&gt;- WHITEBOARD_CONTRIBUTORS: 10&lt;br&gt;..." style="rounded=1;whiteSpace=wrap;html=1;" parent="dUI4cDzIz1VOxFGTC87Q-11" vertex="1">
+          <mxGeometry x="18.5" y="69" width="210" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-15" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;Subcription Policy&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="dUI4cDzIz1VOxFGTC87Q-11" vertex="1">
+          <mxGeometry x="23.5" y="15" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-57" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;fontSize=11;" parent="dUI4cDzIz1VOxFGTC87Q-11" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="127" y="153" as="sourcePoint" />
+            <mxPoint x="126.54999999999995" y="281" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UDjFpvZ7XodF3hWan5yg-6" value="&lt;b&gt;SubscriptionRule&lt;/b&gt;&lt;br&gt;- Type: PremiumPlan-2024-q1&lt;br&gt;- WHITEBOARD_CONTRIBUTORS: 25&lt;br&gt;..." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="dUI4cDzIz1VOxFGTC87Q-11">
+          <mxGeometry x="30" y="275" width="210" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-25" value="" style="group" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1" connectable="0">
+          <mxGeometry x="320" y="720" width="219" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-26" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="dUI4cDzIz1VOxFGTC87Q-25" vertex="1">
+          <mxGeometry width="219" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-27" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;Subscription Engine&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="dUI4cDzIz1VOxFGTC87Q-25" vertex="1">
+          <mxGeometry x="47.004375" y="57" width="130.03125" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-30" value="" style="endArrow=classic;html=1;fontSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="dUI4cDzIz1VOxFGTC87Q-1" source="dUI4cDzIz1VOxFGTC87Q-44" target="dUI4cDzIz1VOxFGTC87Q-26" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="470" as="sourcePoint" />
+            <mxPoint x="361" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-43" value="" style="group" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1" connectable="0">
+          <mxGeometry x="65" y="235" width="237" height="393" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-44" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="dUI4cDzIz1VOxFGTC87Q-43" vertex="1">
+          <mxGeometry width="237.00000000000003" height="393" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-46" value="&lt;b&gt;Subscription Credential&lt;/b&gt;&lt;br&gt;- Type: PlusPlan-2024-q1&lt;br&gt;- Valid from: 01-01-2024&lt;br&gt;- Valid until: 01-01-2025" style="rounded=1;whiteSpace=wrap;html=1;" parent="dUI4cDzIz1VOxFGTC87Q-43" vertex="1">
+          <mxGeometry x="16.16" y="74.86" width="204.68" height="120.14" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-48" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;Agent with Subscription Credentials&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="dUI4cDzIz1VOxFGTC87Q-43" vertex="1">
+          <mxGeometry x="10.772727272727273" y="18.714285714285715" width="215.45454545454547" height="37.42857142857143" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-50" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" parent="dUI4cDzIz1VOxFGTC87Q-43" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="118" y="288.42" as="sourcePoint" />
+            <mxPoint x="118" y="204" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="118" y="234.42" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UDjFpvZ7XodF3hWan5yg-0" value="&lt;b&gt;Subscription Credential&lt;/b&gt;&lt;br&gt;- Type: PremiumPlan-2024-q1&lt;br&gt;- Version: 2024-q1&lt;br&gt;- Valid from: 01-01-2024&lt;br&gt;- Valid until: 01-01-2025" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="dUI4cDzIz1VOxFGTC87Q-43">
+          <mxGeometry x="13" y="262" width="204.68" height="120.14" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-63" value="" style="group" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1" connectable="0">
+          <mxGeometry x="321.5" y="456" width="216" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-60" value="&lt;br&gt;- Benefit Required: WHITEBOARD_CONTRIBUTORS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;" parent="dUI4cDzIz1VOxFGTC87Q-63" vertex="1">
+          <mxGeometry width="216" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-61" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;Benefit Check&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="dUI4cDzIz1VOxFGTC87Q-63" vertex="1">
+          <mxGeometry x="33.99829787234043" y="16.002558139534884" width="155.74468085106383" height="31.627906976744185" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-64" value="" style="endArrow=classic;html=1;fontSize=8;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="dUI4cDzIz1VOxFGTC87Q-1" source="dUI4cDzIz1VOxFGTC87Q-12" target="dUI4cDzIz1VOxFGTC87Q-26" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="193.5" y="638" as="sourcePoint" />
+            <mxPoint x="333.75" y="807" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="dUI4cDzIz1VOxFGTC87Q-1" source="dUI4cDzIz1VOxFGTC87Q-60" target="dUI4cDzIz1VOxFGTC87Q-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="dUI4cDzIz1VOxFGTC87Q-1" source="dUI4cDzIz1VOxFGTC87Q-26" target="dUI4cDzIz1VOxFGTC87Q-67" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="429.5" y="995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-67" value="WHITEBOARD_CONTRIBUTORS: 10" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
+          <mxGeometry x="292.25" y="996" width="274.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-68" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;Platform wide Subscription Policy&lt;/span&gt;" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;strokeColor=#000000;" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
+          <mxGeometry x="558" y="113" width="258" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-69" value="&lt;font style=&quot;font-size: 18px&quot;&gt;All Space Agent&#39;s have SubscriptionCredentials&lt;/font&gt;" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;strokeColor=#000000;" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
+          <mxGeometry x="70" y="113" width="235.5" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-70" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Key actions on server check for benefits (quotas)&amp;nbsp;&lt;/font&gt;" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;strokeColor=#000000;" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
+          <mxGeometry x="332.25" y="113" width="202" height="59" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
