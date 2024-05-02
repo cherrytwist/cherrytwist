@@ -21,7 +21,7 @@ Authorization within Alkemio happens at the level of the GraphQL api i.e. at the
 The Authorization Framework for the platform operates as follows:
 * **Privileges**: For all actions that a User carries out (read, create, update etc) there is a particular _Privilege_ required. 
 * **Credentials**: A User accessing the platform has a set of associated _Credentials_ that are held by the Agent acting on behalf of the User 
-* **Authorization Policy**: The _Authorization Policy_ of the entity being accessed / operated on (e.g. Challenge, Community etc) determines which Privileges are granted to which Credentials.
+* **Authorization Policy**: The _Authorization Policy_ of the entity being accessed / operated on (e.g. Subspace, Community etc) determines which Privileges are granted to which Credentials.
 
 There is an _Authorization Engine_ that determines if a particular action is allowed or not, given the required Privilege, the Credentials held by the User and the Authorization Policy of the Entity being operated on.
 

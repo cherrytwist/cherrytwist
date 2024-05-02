@@ -121,12 +121,12 @@ Test terminology meaning is based on: ["ISTQB" syllabus](https://www.istqb.org/d
   - [ ] User registration
   - [ ] User profile update
   - [ ] User access to available resources
-    - [ ] Hub page
-    - [ ] Challenge page
-    - [ ] Opportunity page
+    - [ ] Space page
+    - [ ] Subspace page
+    - [ ] Subspace page
     - [ ] Search page
     - [ ] Admin page
-      - [ ] Hubs
+      - [ ] Spaces
       - [ ] Users
       - [ ] Organizations
       - [ ] Authorization

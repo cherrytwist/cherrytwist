@@ -42,6 +42,6 @@ You can also use Crowdin to improve translations! Just use the "Search strings" 
 
 ## Any questions?
 
-In case you have any questions on the translating process, feel free to [reach out to us](https://www.alkemio.foundation/support/), or check the [Crowdin support page](https://support.crowdin.com/crowdin-intro/)!
+In case you have any questions on the translating process, feel free to [reach out to us](https://www.alkemio.org/support/), or check the [Crowdin support page](https://support.crowdin.com/crowdin-intro/)!
 
 :raised_hands: Many thanks for helping us improve Alkemio!

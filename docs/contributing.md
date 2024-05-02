@@ -12,7 +12,7 @@ The key repositories in use by the project are:
 - [**Client.Web**](https://github.com/alkem-io/client.web): browser based interface for interacting with the platfrom.
 - [**Demo**](https://github.com/alkem-io/demo): for createing a demonstration instance of the platform, with data, locally.
 - [**Client.Lib**](https://github.com/alkem-io/client.lib): wrapper around the server api for interacting programmatically with the platform.
-- [**Populator**](https://github.com/alkem-io/populator): for populating a Challenge Hub using data loaded from a spreadsheet.
+- [**Populator**](https://github.com/alkem-io/populator): for populating a Subspace Space using data loaded from a spreadsheet.
 - [**Notifications**](https://github.com/alkem-io/notifications): a separate service that provides notification services, using out of band channels such as email.
 - [**Infrastructure**](https://github.com/alkem-io/infrastructure): additional information related to deploying the platform as a cluster
 
@@ -27,25 +27,14 @@ Each repo has its own set of issues.
 
 All Epics are in the Alkemio repo.
 
-The [ZenHub board](https://app.zenhub.com/workspaces/Alkemio-5ecb98b262ebd9f4aec4194c) spans all active repositories and brings all open issues into a joined up backlog. 
-
-There is a **Discord** for more in lace for quick conversations about Alkemio, daily standups etc.
+Our [Roadmap](https://github.com/orgs/alkem-io/projects/4/views/17) is public, so you can see what Epics are being worked on / planned. Note: timelines are an indication, if you see a particular Epic that is important for you please reach out to discuss its prioritization and expected delivery timeline. All Epics are in the Alkemio repo.
 
 If you are contributing to the project the default path is to fork and submit a pull request.
 
-Finally, for discussions about ideas, needing help, collaborations etc, please check out our [GitHub Discussions](https://github.com/alkem-io/alkemio/discussions).
+There is a private [ZenHub board](https://app.zenhub.com/workspaces/Alkemio-5ecb98b262ebd9f4aec4194c) for active sprint planning (private due to Zenhub license model), if you want to get involved at that level then let's talk!
+
+Finally and imporantly, there is a [Building Alkemio Space](https://alkem.io/building-alkemio) on the platform; this is a great place to go and connect to the community behind Alkemio. It is also the place for discussions about ideas, needing help, collaborations etc.
 
 ## Becoming a core contribrutor
 If you are interested in becoming a core contributor then please reach out via <community@alkem.io>.
 
-## Thank you to the following contributors
-- valentinyanakiev
-- atstoyanov
-- comoque1
-- ReneHonig
-- wordsmyth73
-- eredine
-- hero101
-- GhostOnTheFiber
-- Pimotte
-- OlegSubik
