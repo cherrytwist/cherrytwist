@@ -6,7 +6,7 @@ This technical note covers
 ## Roadmap drivers
 The ability to filter content on the platform based on the value selected in a Tagset is useful in the following contexts:
 * Specifying the display location for a Callout in a Space
-* Specifying the display location for a Callout in a Challenge / Opportunity
+* Specifying the display location for a Callout in a Subspace
 * Specifying the state from an Innovation Flow to show the Callouts for
 * Classifying content based on a nomenclature e.g. SDKs
 
@@ -24,7 +24,7 @@ As such the Tagset entity knows its type, the set of tags associated with it, th
 ### Tagset Templates
 TagsetTemplates provide two key capabilities:
 * **Shared set of allowedValues**: to provide a single shared definition that can be shared amongst multiple Tagsets of type single / multiple select. 
-* **Knowing what Tagsets should be created in a given context**: for example the Tagsets to be created on Callouts in a Space are different to those on a Challenge. 
+* **Knowing what Tagsets should be created in a given context**: for example the Tagsets to be created on Callouts in a Space are different to those on a Subspace. 
 
 The TagsetTemplate entity is held in a containing TagsetTemplateSet entity. This is both to make it easier to use in multiple places in the domain model, and also avoids ORM linkages in the code base (technical).
 
@@ -32,7 +32,7 @@ The Collaboration entity uses a TagsetTemplateSet to hold the TagsetTemplates to
 * Space: 
     * Default: type = freeform, for allowing any tags to be added
     * DisplayLocation: type = singleSelect, for specifying the palcement of the Callout within the display of the Space
-* Challenge: 
+* Subspace: 
     * Default: type = freeform, for allowing any tags to be added    
     * DisplayLocation: type = singleSelect, for specifying the placement of the Callout within the display of the Space
     * States: type = singleSelect for the set of visible states from the InnovationFlow
@@ -54,6 +54,6 @@ This does mean that the Collaboration entity needs to know what "Tagset Template
 
 It is expected that the set of values in a single / multiple select Tagset do not change frequently. 
 
-For example the set of displayLocation values is fairly fixed for the Space and Challenge. 
+For example the set of displayLocation values is fairly fixed for the Space and Subspace. 
 When the set of allowedValues does need to change, for example, if the InnovationFlow lifecycle being used changes, then the business logic will need to ensure that the relevant TagsetTemplate is updated - plus ensuring that the selected value is one of the values in the set of allowedValues. 
 

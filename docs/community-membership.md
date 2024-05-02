@@ -1,7 +1,7 @@
 # Community Membership
-The Alkemio platform is intended to make it much easier for contributors (users and organizations) to work together on shared goals. The set of contributors around a Challenge / Hub / Opportunity is called a Community.
+The Alkemio platform is intended to make it much easier for contributors (users and organizations) to work together on shared goals. The set of contributors to a Space / Subspace is called a Community.
 
-In this document the term "user" can be taken to refer to both organizations as well as users. The primary focus is on users, but most if not all of the requirements also directly apply to organizations as the platform allows organizations to join Challenges similar to how a user does.
+In this document the term "user" can be taken to refer to both organizations as well as users. The primary focus is on users, but most if not all of the requirements also directly apply to organizations as the platform allows organizations to join Spaces / Subspaces similar to how a user does.
 
 ## Members of a Community
 A Community thus has members.
@@ -22,7 +22,7 @@ As part of designing the expanded version of community membership, the following
 * To be updated as to developments in that community
 * To connect and interact with other users in that community
 * To have their contributions visible, both in terms of profile and to make a statement
-* To see what is happening within a private Hub / Challenge
+* To see what is happening within a private Space / Subspace
 * To be inspired by what is happening
 
 # Becoming a Community Member
@@ -30,12 +30,12 @@ The key question then arises of "how" a User joins a Community?
 
 Currently there are three options:
 * **Applications**: The User applies to join a Community, and their application is then approved / rejected by an admin of that Community
-    * *Why not enough?* This works well for highly curated communities, but is too high a threshold for a situation where you want users to much easier engage with a Challenge / Hub.
+    * *Why not enough?* This works well for highly curated communities, but is too high a threshold for a situation where you want users to much easier engage with a Space.
 * **Directly Join**: allowing users based on held credentials to directly join a community. So without an application + approve / reject flow.
     * Example 1: all Users associated with a particular organization
-        * This is for example the case with UWV where they would like to grant all users with an email address (verified!) matching the UWV domain to be member of the UWV organization, and thus to be able to directly join the UWV hub (private)
+        * This is for example the case with UWV where they would like to grant all users with an email address (verified!) matching the UWV domain to be member of the UWV organization, and thus to be able to directly join the UWV Space (private)
     * Example 2: Members of another community
-        * This would be the case whereby once someone is a member of a Hub that they can then join Challenge communities hosted within that Hub.
+        * This would be the case whereby once someone is a member of a Space that they can then join Subspace communities hosted within that Space.
 * **Direct addition**: The Community admin directly adds the User
     * This option **will** be removed, as the User does not get a Chance to accept the conditions for joining that Community. It will be replaced by Invitations (see below).
 
@@ -54,7 +54,7 @@ The Community Admin should be able to control how membership of that Community h
 
 For example:
 * Allowing all Users from a particular Organization to be able to Join the Community
-* Allowing members of a Hub to join child Challenges directly or that they should apply / be invited
+* Allowing members of a Space to join child Subspaces directly or that they should apply / be invited
 * Not allowing any applications
 
 # Design
@@ -70,8 +70,8 @@ It is the combination of the credentials held by the user togethr with the AUtho
 
 The above design is very powerful, but also is not "familiar" to most users - so it is not exposed via the api. Instead the domain model maintains a number of "settings" to administrators that then get translated by the server into the authorization policy rules to be applied.
 
-## Hub Preferences
-The Hub Administrator is able to set preferences related to Community membership on the Hub.
+## Space Preferences
+The Space Administrator is able to set preferences related to Community membership on the Space.
 
 The following are the currently supported preferences for community membership:
 * *Allow users to Apply for Membership*
@@ -107,7 +107,7 @@ If there is a parent community the following additional information is needed:
 * If the user is a member of the parent community
 * The privileges held by the user on the parent Community (myParentCommunityPrivileges)
 
-### Hub Logic
+### Space Logic
 1. Authenticated = n ==> "Login to Continue"
 2. isMember = y ==> "Member"
 3. applicationPending = y ==> "Application pending
@@ -116,7 +116,7 @@ If there is a parent community the following additional information is needed:
 6. "Membership not available"
 The client currently has some fairly complex logic that determines when users can apply, what message is shown to them. That needs to be adapted / extended to deal with the above.
 
-### Challenge Logic
+### Subspace Logic
 1. Authenticated = n ==> "Login to Continue"
 2. isMember =y ==> "Member"
 3. applicationPending = y ==> "Application pending"

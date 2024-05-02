@@ -25,11 +25,11 @@ The way discussions are created / started
 
 ### [Standalone community page with collapsible organization view](https://xd.adobe.com/view/e0aa155d-63ef-4b01-8603-0ce36fc88072-b5f9)
 
-Contains designs for hub / challenge communities with collapsible view of the organizations
+Contains designs for Space /Subspace communities with collapsible view of the organizations
 
 ### [Standalone community page with details](https://xd.adobe.com/view/ad39c026-3a46-4520-a24d-3b0d70d07d1c-f86a)
 
-Contains designs for hub / challenge / opportunity communities with details corresponding to the entity they are associated with
+Contains designs for Space / Subspace communities with details corresponding to the entity they are associated with
 
 ## Organisation profile designs
 

@@ -103,12 +103,12 @@ Alkemio uses the following text styles:
 |                       |         |                                                                   |                                                  |
 |                       |         |                                                                   |                                                  |
 |                       |         |                                                                   |                                                  |
-| Hub                   | #1D384A | ![#1D384A](https://placehold.jp/1D384A/ffffff/50x20.png?text=%20) | (later)                                          |
-| On Hub                | #FFFFFF | ![#FFFFFF](https://placehold.jp/FFFFFF/ffffff/50x20.png?text=%20) | Text/items on elements with a Hub color          |
-| Challenge             | #065F6B | ![#065F6B](https://placehold.jp/065F6B/ffffff/50x20.png?text=%20) | (later)                                          |
-| On Challenge          | #FFFFFF | ![#FFFFFF](https://placehold.jp/FFFFFF/ffffff/50x20.png?text=%20) | Text/items on elements with a Challenge color    |
-| Opportunity           | #A2D2DB | ![#A2D2DB](https://placehold.jp/A2D2DB/ffffff/50x20.png?text=%20) | (later)                                          |
-| On Opportunity        | #1D384A | ![#1D384A](https://placehold.jp/1D384A/ffffff/50x20.png?text=%20) | Text/items on elements with an Opportunity color |
+| Space                   | #1D384A | ![#1D384A](https://placehold.jp/1D384A/ffffff/50x20.png?text=%20) | (later)                                          |
+| On Space                | #FFFFFF | ![#FFFFFF](https://placehold.jp/FFFFFF/ffffff/50x20.png?text=%20) | Text/items on elements with a Space color          |
+| Subspace             | #065F6B | ![#065F6B](https://placehold.jp/065F6B/ffffff/50x20.png?text=%20) | (later)                                          |
+| On Subspace          | #FFFFFF | ![#FFFFFF](https://placehold.jp/FFFFFF/ffffff/50x20.png?text=%20) | Text/items on elements with a Subspace color    |
+| Subspace           | #A2D2DB | ![#A2D2DB](https://placehold.jp/A2D2DB/ffffff/50x20.png?text=%20) | (later)                                          |
+| On Subspace        | #1D384A | ![#1D384A](https://placehold.jp/1D384A/ffffff/50x20.png?text=%20) | Text/items on elements with an Subspace color |
 
 
 ![](./images/ux-colors.png)

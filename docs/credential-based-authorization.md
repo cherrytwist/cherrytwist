@@ -24,7 +24,7 @@ The terminology used within Alkemio for Credential Based Authorization has borro
 
 Terms:
 * **Credential**: a combination of a **Type** and **Resource** that can be assigned to an Agent.  
-* **Resource**: the Entity __to__ which the credential is bound e.g. Challenge
+* **Resource**: the Entity __to__ which the credential is bound e.g. Subspace
 * **Privilege**: A particular type of access that can be granted (e.g. create, update, read, delete, grant etc)
 * **Authorization Policy**: contains a set of rules that specify which access (i.e. what privileges) is grated to Credentials that match the rule criteria. Each entity has its own Authorization Policy.
 
@@ -42,36 +42,33 @@ There are multiple credential types in use within Alkemio. Note that in the text
 These credentials do not have a resource ID specified as they are applicable regardless of context. 
 * _RegisteredUser_: for users that are registered on the platform
 * _GlobalAdmin_: for the platform administrators, including management of global credentials
-* _GlobalAdminHubs_: for platform administration of hubs
+* _GlobalAdminSpaces_: for platform administration of Spaces
 * _GlobalAdminCommunity_: for platform administration of contributors
 
-Note that the root role is Global Admin, which is able to manage the other global roles (Global Admin Hubs, Global Admin Community) and is a pure superset of the privileges assigned to those roles. The expected usage is that there is a small set of Global Admins, with potentially a larger set of Global Admin Hubs that facilitate usage of the platform by helping Hub Admins.  
+Note that the root role is Global Admin, which is able to manage the other global roles (Global Admin Spaces, Global Admin Community) and is a pure superset of the privileges assigned to those roles. The expected usage is that there is a small set of Global Admins, with potentially a larger set of Global Admin Spaces that facilitate usage of the platform by helping Space Admins.  
 
 ### **Context Dependent Roles**
 These are roles that are specific to a context (resourceID) on the platform. Some of the roles are only applicable to e.g. Organizations, but others are applicable to both Users and Organizations. In that case we use the term Contributor.
 
 Example roles: 
-* _HubMember_: to identify a Contributor as being a Member of a Hub
-* _HubHost_: to identify a Contributor as being a Host of a Hub. 
-* _HubAdmin_: to identify a User as being an Admin of an Hub
-* _ChallengeMember_: to identify a Contributor as being a Member of a Challenge
-* _ChallengeLead_: to identify a Contributor as being aa Lead of a Challenge
-* _ChallengeAdmin_: to identify a User as being aa Admin of a Challenge
-* _OpportunityMember_: to identify a Contributor as being a Member of a Opportunity
-* _OpportunityLead_: to identify a Contributor as being a Lead of a Opportunity
-* _ChallengeAdmin_: to identify a User as being aa Admin of a Challenge
+* _AccountHost_: to identify a Contributor as being a Host of an Account. 
+* _SpaceMember_: to identify a Contributor as being a Member of a Space
+* _SpaceAdmin_: to identify a User as being an Admin of an Space
+* _SubspaceMember_: to identify a Contributor as being a Member of a Subspace
+* _SubspaceLead_: to identify a Contributor as being aa Lead of a Subspace
+* _SubspaceAdmin_: to identify a User as being aa Admin of a Subspace
 * _UserSelfManagement_: to identify the User as being able to manage their own Profile
 
 An example: consider a User that holds the following Credential:
-- Type: HubMember
-- ResourceID: Challenge6
+- Type: SpaceMember
+- ResourceID: Subspace6
 
-This User is then a member of Challenge6, but clearly is *not* a member of Challenge7.
+This User is then a member of Subspace6, but clearly is *not* a member of Subspace7.
 
 ### **Relationships**
 In addition, some key relations are also represented by Credentials. Whilst currently these credentials are used to manage relationships, it is expected that near term that these credentials will also enable certain actions on the platform. 
-* _HubHost_: when held by an Organization, it is used to identify that they are the host for a particular Hub
-* _ChallengeLead_: held by an Organization to identify that they are the host for a particular Challenge.
+* _AccountHost_: when held by an Organization, it is used to identify that they are the host for a particular set of Spaces in an Account
+* _SubspaceLead_: held by an Organization to identify that they are the host for a particular Subspace.
 
 ## **AuthorizationPolicy**
 Each entity upon which a User can carry out action on the Alkemio platform has associated with it an AuthorizationPolicy. Each AuthorizationPolicy contains a set of **rules** that determine what Privileges are granted to a particular agent. The set of rule types include:
@@ -96,7 +93,7 @@ An AuthorizationPolicy contains a set of CredentialRules. Each CredentialRule sp
 A sample authorization policy rules:
 cerdentialRules: [
     {
-        type: challenge-admin,
+        type: Subspace-admin,
         resourceID: '1234',
         grantedPrivileges: ['read', 'update'],
     },
@@ -117,20 +114,20 @@ The third element of the Authorization framework within the Alkemio platform is 
 
 The inputs are as follows:
 * **Agent with Credentials**: who wants to carry out the action e.g. User
-* **Authorization Policy**: the authorization policy of the entity that the action is being carried out on e.g. Challenge.
+* **Authorization Policy**: the authorization policy of the entity that the action is being carried out on e.g. Subspace.
 * **Privileges required**: the privilege that is required to be able to carry out the action
 
 ### Example
-To illustrate, please consider the case of an authenticated User that is a member of Challenge 7. The data setup is then as follows:
-* As the User is a Member of Challenge 7, the Agent operating on behalf of that User holds a ChallengeMember credential with resourceID of 7. 
-* The Challenge 7 entity has an AuthorizationPolicy that states that any agent holding a credential matching the following criteria is granted the READ privilege: {type: ChallengeMember, resourceID: 7}
+To illustrate, please consider the case of an authenticated User that is a member of Subspace 7. The data setup is then as follows:
+* As the User is a Member of Subspace 7, the Agent operating on behalf of that User holds a SubspaceMember credential with resourceID of 7. 
+* The Subspace 7 entity has an AuthorizationPolicy that states that any agent holding a credential matching the following criteria is granted the READ privilege: {type: SubspaceMember, resourceID: 7}
 
-_Case 1_:  The User wishes to READ the list of who is a member of a Challenge 7. 
+_Case 1_:  The User wishes to READ the list of who is a member of a Subspace 7. 
 - The execution of the request to read the members list passes both the Credentials held by the User and the Authorization Policy to the AuthorizationEngine, together with the required privilege: "READ"
 - The AuthorizationEngine evaluates the request and returns true. 
 
-_Case 2_:  The User wishes to update the definition of Challenge 7.
-- The execution of the request to update the Challenge passes both the Credentials held by the User and the Authorization Policy to the AuthorizationEngine, together with the required privilege: "UPDATE"
+_Case 2_:  The User wishes to update the definition of Subspace 7.
+- The execution of the request to update the Subspace passes both the Credentials held by the User and the Authorization Policy to the AuthorizationEngine, together with the required privilege: "UPDATE"
 - The AuthorizationEngine evaluates the request and returns false.
 
 ## Populating Authorization Policies
@@ -138,9 +135,9 @@ The Authorization Policy for each _Authorizable_ entity is cascaded through the 
 
 There is a root level Platform Authorization Policy.
 
-The AuthorizationPolicy for a Hub is determined by the service 'HubAuthorizationService'. It takes the Platform Authorization, and extends the Authorization Policy with a combination of Credential Rules, Verified Credential Rules and Privilege Rules.
+The AuthorizationPolicy for a Space is determined by the service 'SpaceAuthorizationService'. It takes the Platform Authorization, and extends the Authorization Policy with a combination of Credential Rules, Verified Credential Rules and Privilege Rules.
 
-The Hub Authorizaton Policy is then cascaded through to contained entities, such as the Community entity or Challenges, which take the Hub Authorization Policy and extend it as needed for that context.
+The Space Authorizaton Policy is then cascaded through to contained entities, such as the Community entity or Subspaces, which take the Space Authorization Policy and extend it as needed for that context.
 
 This process continues down through the containment hierarchy.
 
@@ -157,10 +154,10 @@ The current setup can be improved in multiple dimensions:
  
 
 ## **Reference**
-* [Machine Readable Governance Frameworks](https://github.com/hyperledger/aries-rfcs/blob/master/concepts/0430-machine-readable-governance-frameworks/README.md)
-* [Simple Grant Language (SGL)](https://evernym.github.io/sgl/)
+* [Machine Readable Governance Frameworks](https://gitSpace.com/hyperledger/aries-rfcs/blob/master/concepts/0430-machine-readable-governance-frameworks/README.md)
+* [Simple Grant Language (SGL)](https://evernym.gitSpace.io/sgl/)
 * [Capability Based Access System (CBAS)](https://i.imgur.com/MDmqsIK.png)
-* [Trust Framework RFC](https://github.com/hyperledger/aries-rfcs/blob/master/concepts/0103-indirect-identity-control/guardianship-sample/trust-framework.md)
+* [Trust Framework RFC](https://gitSpace.com/hyperledger/aries-rfcs/blob/master/concepts/0103-indirect-identity-control/guardianship-sample/trust-framework.md)
 [CASL](https://casl.js.org/) - a claims framework. 
 
 

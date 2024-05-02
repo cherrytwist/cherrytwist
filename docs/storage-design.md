@@ -46,7 +46,7 @@ for a given Storage Bucket to adjust:
 * What file types can be stored 
 * The maximum file size that can be uploaded
 
-Note also each "community scope" will essentially need its own Storage Bucket. In particular, a Challenge will need to have its own StorageBucket as the Documents 
+Note also each "community scope" will essentially need its own Storage Bucket. In particular, a Subspace will need to have its own StorageBucket as the Documents 
 contained in it will be subject to different access rules than Documents in the containing Space. 
 
 
@@ -81,7 +81,7 @@ This does mean that there is a separate hierarchy of relations between the Stora
 ## Aggregating Storage Buckets
 The following entities in the Alkemio domain model are then used to act as aggregators for the StorageBuckets on Profiles:
 * Space
-* Challenge: essentially a child of the parent Space Storage Bucket.
+* Subspace: essentially a child of the parent Space Storage Bucket.
 * Platform
 * Library
 * Organization

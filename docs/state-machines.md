@@ -3,7 +3,7 @@ This technical note covers the implementation + usage of statecharts in Alkemio.
 
 The rational for adding statecharts as a core platform capability is:
 * Powerful representation of business logic, bridging development + business
-* Allows for shared understanding of progress (“how mature is this challenge? What is the status of my application?”)
+* Allows for shared understanding of progress (“how mature is thisSubspace? What is the status of my application?”)
 
 ## Context
 This section covers background material.
@@ -21,7 +21,7 @@ The Statechart implementation is based on XState. This is a powerful open source
 
 ### Usage
 Statecharts are already used in the following places:
-* Innovation Flow (on Challenge / Opportunity)
+* Innovation Flow (on Subspace / Subspace)
 * Community membership management via Applications & Invitations
 * Organizational Verification
 * Whiteboard checkin / checkout
@@ -32,7 +32,7 @@ The expectation that over time the usage of Statecharts for implementing and exe
 The Innovation Flow functionality is at the heart of the platform, guiding users on their journey. It is very basic, with the actual capability offered to users being not more than surfacing up the curent state. 
 
 However there is very strong pull to finally fully implement the vision:
-* Supporting customers working through a defined set of states on challenges with their community
+* Supporting customers working through a defined set of states onSubspaces with their community
 * Supporting methodologies such as TheoryU, Doughnut Economics, Digicampus Pipeline etc
 
 Note: for the full implementation of InnovationFlows there is also substantial work required in terms of associating Callouts and actions with States, that is outside the scope of this technical note. 

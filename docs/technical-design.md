@@ -30,15 +30,15 @@ The following high level choices guide the technical design:
     *   It is worth noting that the Host Organization for a Space could later play a role in this scenario as facilitator of the regulated value exchange e.g. hold money in escrow for stakeholders + then pay parties based on signals from the platform that a Project has completed successfully
 *   **Formalise Trust**
     *   This implies making explicit how agreements are made between actors of the platform, and how the representation of those interactions can be trusted. 
-    *   The shared context gives a base of understanding, defining the change to be achieved. For Users or Organizations joining a Challenge they can then as part of the application process confirm that they agree to any particular terms / agreements that are used by the parties collaborating around that Challenge. 
+    *   The shared context gives a base of understanding, defining the change to be achieved. For Users or Organizations joining a Subspace they can then as part of the application process confirm that they agree to any particular terms / agreements that are used by the parties collaborating around that Subspace. 
 *   **Simple to operate**
     *   The platform should be easy to configure, deploy and run - also implying that the number of external dependencies needs to be very carefully managed. 
 
-It is worth noting that some of these choices, especially regarding having an Organization in the Space Host role for facilitating Challenges, is made in the context of getting a first version of Alkemio deployable. The expectation is fully that these posts can be decentralised as the platform and wider context within which it is used matures - and indeed the architecture is set up to ensure that this is feasible in an incremental manner.
+It is worth noting that some of these choices, especially regarding having an Organization in the Space Host role for facilitating Subspaces, is made in the context of getting a first version of Alkemio deployable. The expectation is fully that these posts can be decentralised as the platform and wider context within which it is used matures - and indeed the architecture is set up to ensure that this is feasible in an incremental manner.
 
 # Logical Data Model
 
-The goal of the Alkemio platform is to manage the shared representation of Challenges and to faciliate collaboration within the context of those Challenges. To support this, the platform has a *logical data model* for storing the shared representation and for facilitating the collaboration. 
+The goal of the Alkemio platform is to manage the shared representation of Subspaces and to faciliate collaboration within the context of those Subspaces. To support this, the platform has a *logical data model* for storing the shared representation and for facilitating the collaboration. 
 
 The following diagram shows at a high level the key entities in use within Alkemio:
 
@@ -46,7 +46,7 @@ The following diagram shows at a high level the key entities in use within Alkem
 <img src="images/design-logical-data-model.png" alt="Logical Data Model" width="600" />
 </p>
 
-This logical data model attempts to keep to a minimum, at least initially, the set of entities that are represented in the platform, while still being able to reflect the types described in the conceptual design. The rationale for this is to keep the approach as general as possible, allowing further innovation how Challenges are managed. 
+This logical data model attempts to keep to a minimum, at least initially, the set of entities that are represented in the platform, while still being able to reflect the types described in the conceptual design. The rationale for this is to keep the approach as general as possible, allowing further innovation how Subspaces are managed. 
 
 The key entities in the model are:
 *   **Space:**: The combination of the change to be achieved with the community contributing to that change, and collaboration towards the change. 
@@ -58,8 +58,8 @@ The key entities in the model are:
 *   **Collaboration**: 
     * **Callouts**: How to engage the members of a Community to get their wisdom on issues faced, solutions, others to engage, network etc.  
     * **Posts**: The posts to allow members to contribute
-    * **Relation**: an interaction to be tracked between two Users / Organizations / Groups related to a particular Opportunity
-*   **Agents**: representing an entity in the platform in interactions with other entities. Entities with Agents include: Users, Organizations, Challenges, Space etc. 
+    * **Relation**: an interaction to be tracked between two Users / Organizations / Groups related to a particular Subspace
+*   **Agents**: representing an entity in the platform in interactions with other entities. Entities with Agents include: Users, Organizations, Subspaces, Space etc. 
     * **Credentials**: a list of credentials held by the Agent. Important to note is that there are two types of credentials that can be associated with an Agent (a) simple credentials, which are managed by the platform (b) verified credentials, which are familiar W3C Verified Credentials. 
 *   **Authorization Policy**: representing the authorization rules that grant privileges to agents that are interacting with the entity.  
     * **Privilege**: a list of potential Privileges such as Create, Read, Update, Delete, Grant that can be required in any particular interaction. 
@@ -86,7 +86,7 @@ Note that the platform itself is designed to be able to be used in a "headless" 
 
 ## User Interaction
 
-Users and Organizations interact in many different ways over the lifecycle of the Challenge. As such the primary goal of the Interaction Layer is to ensure that many different types of interactions are feasible, while of course also allowing easy adoption of the platform via one or more reference user interfaces.
+Users and Organizations interact in many different ways over the lifecycle of the Subspace. As such the primary goal of the Interaction Layer is to ensure that many different types of interactions are feasible, while of course also allowing easy adoption of the platform via one or more reference user interfaces.
 
 Examples types of interactions:
 *   Web client (default)
@@ -119,7 +119,7 @@ This section describes how users interact with the platform in a secure manner.
 
 The key design goals driving the setup below are:
 * **Security**: security is critical for a platform that is facilitating the collaboration between multiple stakeholders: the trust is needed for interactions.
-* **Decentralization ready**: the interaction pattern has to be able to support operating in a decentralized setup. By decentralized in this case we focus on having entities such as Challenges, Opportunities, Users, Organizations being able to interaction *without* being on the same server. The initial implementation does have all entities on the same server, but the interaction pattern has to support being decentralized. 
+* **Decentralization ready**: the interaction pattern has to be able to support operating in a decentralized setup. By decentralized in this case we focus on having entities such as Subspaces, Opportunities, Users, Organizations being able to interaction *without* being on the same server. The initial implementation does have all entities on the same server, but the interaction pattern has to support being decentralized. 
 * **Extendable**: there are many ways that entities (e.g. users) can authenticate themselves, so the design needs to be flexible in terms of how entities are authenticated.  
 
 ## Actor Model & Agents
@@ -127,13 +127,13 @@ The target interaction pattern is the Actor Model, whereby entities are represen
 
 Core autonomous entities in the platform have an **Agent** that represents that entity in platform interactions. 
 
-Entities with Agents currently are: User, Organization, Space, Challenge & Opportunity. 
+Entities with Agents currently are: User, Organization, Space, Subspace & Subspace. 
 
 Each Agent has _Credentials_ which can interact on behalf of the user / entity with other elements of the platform. 
 
 The usage of Agents is currently largely invisible to Users - but it is critical to setup the platform from the start with Agent based interaction patterns to enable moving more decentralized later.
 
-Note: the text below primarily talks about Users for Authentication and Authorization, but the approach is also applicable for other entities with Agents e.g. Challenges, Organizations etc. 
+Note: the text below primarily talks about Users for Authentication and Authorization, but the approach is also applicable for other entities with Agents e.g. Subspaces, Organizations etc. 
 
 ## Authentication Providers
 The Authentication of users is handled by Authentication Providers, a pluggable mechanism whereby multiple types of Authentication can be supported by the platform. After successful Authentication, the platform retrieves the Agent for the User and that Agent is then used to carry out actions on behalf of the User. 
@@ -157,7 +157,7 @@ All Authorization within the Alkemio platform is based on Credential Based Autho
 
 Essentially upon a User authenticating, the following happens:
 * The platform retrieves the Agent that represents that User
-* The Credentials held by that Agent are used to decide if the requested action from the User (e.g. Read a Challenge details, update their profile, update a Challenge definition etc) is Authorized. 
+* The Credentials held by that Agent are used to decide if the requested action from the User (e.g. Read a Subspace details, update their profile, update a Subspace definition etc) is Authorized. 
 
 Worth noting that this approach also allows for Credentials to be later held outside of the platform e.g. the user holds their own wallet and manages their own credentials. The ideal scenario for Users is that ultimately they can have their own SSI that can then control the Agents managed by the platform - or replace the platform Agents. 
 
@@ -165,11 +165,11 @@ Worth noting that this approach also allows for Credentials to be later held out
 # Templates
 A key design goal for Alkemio is the sharing of best practices, so the platform needs to be customizable. This is achieved with Templates.
 
-Templates support is high up the backlog for the platform, as it is important that key entities (e.g. Space, Challenge, Opportunity, Project etc) can be instantiated based on a particular template. 
+Templates support is high up the backlog for the platform, as it is important that key entities (e.g. Space, Subspace, Subspace, Project etc) can be instantiated based on a particular template. 
 
 Key areas where we expect that templates support will be useful include:
-* Lifecycles: what is the lifecycle (also sometimes referred to as process) that your entities should follow? What do each of the states mean? What actions should be triggered e.g. if a Challenge is approved?
-* Posts: what are the key posts for a Challenge / Opportunity that need to be captured within a given Challenge / Opportunity?
+* Lifecycles: what is the lifecycle (also sometimes referred to as process) that your entities should follow? What do each of the states mean? What actions should be triggered e.g. if a Subspace is approved?
+* Posts: what are the key posts for a Subspace / Subspace that need to be captured within a given Subspace / Subspace?
 * Community: what type of community do you intend to create? What User groups make sense?
 * Whiteboards: what collaboration canvases should be available and what is the goal of each canvas?
 * (later) what are custom credentials / actions that can be carried out within a particular context?
@@ -200,13 +200,13 @@ Each NameID is unique within a certain scope. The following table shows which en
 | User      | Global amongst Users       |
 | Organization   | Global amongst Organizations        |
 | Space   | Global amongst Spaces        |
-| Challenge   | Within containing Space         |
-| Opportunity   | Within containing Space         |
+| Subspace   | Within containing Space         |
+| Subspace   | Within containing Space         |
 | Project   | Within containing Space         |
 
 Notes:
-* This implies that within a particular Space that the NameIDs for all Challenges, Opportunities and Projects need to be unique. 
-* The combination of (Space.NameID, Challenge.NameID) is sufficient to universally identify a particular Challenge using human friendly names. 
+* This implies that within a particular Space that the NameIDs for all Subspaces, Opportunities and Projects need to be unique. 
+* The combination of (Space.NameID, Subspace.NameID) is sufficient to universally identify a particular Subspace using human friendly names. 
 
 The following rules apply to the creation / usage of a NameID:
 * 25 character limit
@@ -216,13 +216,13 @@ NameIDs logically **can** be updated (not initially), but with a warning re URLs
 
 
 # Innovation Flows
-As described in the Conceptual Design, the collaboration around a Challenge starts with a shared understanding ('Context'). A key element of that shared understanding is understanding where the Challenge (or other entity) is in terms of its maturity. 
+As described in the Conceptual Design, the collaboration around a Subspace starts with a shared understanding ('Context'). A key element of that shared understanding is understanding where the Subspace (or other entity) is in terms of its maturity. 
 
-The term used within the Alkemio platform for the managing the maturity of Challenges (+ other entities), as well as to enforce processes / workflows, is **Innovation Flow**. 
+The term used within the Alkemio platform for the managing the maturity of Subspaces (+ other entities), as well as to enforce processes / workflows, is **Innovation Flow**. 
 
 State based representations are widely used, with Finite State Machines (FSMs) being a formalism whereby a system can be in exactly one from a defined set of states, with clearly defined criteria / rules for when a transition can take place. Examples include Kanban boards, RFCs as well as more formally business process modeling approaches. 
 
-A state based representation is a natural match for collaboration on Challenges – allowing clarity for the multiple parties interacting as it is always clear where the Entity is (exactly one state) as well as the allowed transitions with guards that determine how an Entity moves between the potential States. 
+A state based representation is a natural match for collaboration on Subspaces – allowing clarity for the multiple parties interacting as it is always clear where the Entity is (exactly one state) as well as the allowed transitions with guards that determine how an Entity moves between the potential States. 
 
 ## State Machine
 Alkemio uses the [XState](https://xstate.js.org) engine for managing the lifecycle of entities. The embedded XState engine is extremely capable and is widely used. It provides the core state representation syntax, logic and execution.
@@ -246,7 +246,7 @@ After executing the command, the Lifecycle then stores the machine state ready f
 Critically, the separation of the Lifecycle definition using XState allows for the definition of the states  to be declaratively specified. 
 
 
-For example, consider the following lifecycle definition, used for a very simple Challenge:
+For example, consider the following lifecycle definition, used for a very simple Subspace:
 
 ```
 {
@@ -299,7 +299,7 @@ If you are curious you can also cut and paste the above definition into the [off
 
 ## Usage
 The platform currently uses Innovation Flows on the following entities:
-* Challenges
+* Subspaces
 * Opportunities
 
 The usage is currently fairly basic as the focus has being on ensuring that the concept is properly embedded within the platform and that it provides a solid foundation for future expansion (as per design principles at the start of this document).
@@ -319,10 +319,10 @@ In addition, the underlying state machine representation ('Lifecycle') is also u
 There is already a demonstrator to illustrate the power of this approach, and how it can be integrated with SSI / VCs.
 
 For this scenario the following was demonstrated:
-* An Agent acting on behalf of a Challenge issued a VC for "LifecycleStateManagement" to a particular User
+* An Agent acting on behalf of a Subspace issued a VC for "LifecycleStateManagement" to a particular User
 * The Agent acting on behalf of the User then stores that VC into its digital wallet (SSI)
-* The logic for the Lifecycle for the Challenge was updated to include a new guard that was executed on all state transitions for a Challenge Lifecycle. 
-* The new guard specified that only Agents with an assigned VC of the above type and tied to the particular Challenge were allowed to update the Challenge state.
+* The logic for the Lifecycle for the Subspace was updated to include a new guard that was executed on all state transitions for a Subspace Lifecycle. 
+* The new guard specified that only Agents with an assigned VC of the above type and tied to the particular Subspace were allowed to update the Subspace state.
 
 # Communications
 The Alkemio Platform supports communications in the following way:
@@ -344,7 +344,7 @@ Each Community within Alkemio has two Rooms available:
 * **Updates Room**: whereby a User who is authorized can send updates to a community
 * **Discussion Room**: whereby members of the community can broadcast messages to the whole community
 
-Note that there is a Community entity associated with each Space, Challenge and Opportunity - ensuring that each of these entities can have Community based messaging.
+Note that there is a Community entity associated with each Space, Subspace and Subspace - ensuring that each of these entities can have Community based messaging.
 
 ## User-User Messaging
 Each User can also have a private Room with any other User on the platform. 
@@ -369,11 +369,11 @@ Further, the conceptual design of Matrix, with the notion of HomeServer and repl
 
 
 # Communities & User On-boarding
-Each Space, Challenge and Opportunity has a Community. This Community represents the set of Users and Organizations that are contributing.
+Each Space, Subspace and Subspace has a Community. This Community represents the set of Users and Organizations that are contributing.
 
 Membership of a Community is curated, meaning that there is an explicit step required to become a member of a Community.
 
-Membership is hierarchical, meaning that to be a member of a Challenge the User also needs to be a member of the containing Space.
+Membership is hierarchical, meaning that to be a member of a Subspace the User also needs to be a member of the containing Space.
 
 Only registered Users can apply i.e. a User needs to have a Profile on the platform to be able to apply (logically enough!).
 
@@ -382,7 +382,7 @@ There are currently two ways for a User to become a member of a Community:
 * Directly added by an administrator for the Community
 * Apply to become a member
 
-For the latter, the user can fill out a simple form to apply to become a member. The set of questions users are requested to fill out is currently fixed per level (i.e. the same set of questions is used for all Spaces, and for all Challenges) - however once Templates are available these questions will be configurable per Community.
+For the latter, the user can fill out a simple form to apply to become a member. The set of questions users are requested to fill out is currently fixed per level (i.e. the same set of questions is used for all Spaces, and for all Subspaces) - however once Templates are available these questions will be configurable per Community.
 
 The high level flow for applications is shown below.
 

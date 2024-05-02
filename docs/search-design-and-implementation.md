@@ -26,7 +26,7 @@ and the result service, to return the results to the client using the GraphQL sc
    A score function is also defined, which applies custom scoring over the filtered (returned) documents.
 4. The returned documents from `Elasticsearch` are mapped to a simple base object, with some metadata like score, identifiers, etc.
 5. Mapped search results are returned back to `Search2Service`
-6. `Search2Service` is using `SearchResultService` to enrich the raw documents from `Elasticsearch`. This also includes helper fields, like the Space, `Challenge`, `Opportunity` for a `Post`.
+6. `Search2Service` is using `SearchResultService` to enrich the raw documents from `Elasticsearch`. This also includes helper fields, like the Space, `Challenge`, `Subspace` for a `Post`.
 Consult the GraphQL schema for all the available fields.
 7. Each already enrich document (entity) is authorized against the user who is searching. The user needs the READ privilege in order to have access to the entity.
 8. All the results are compiled in a few categories, ordered by score, and sent back to `Search2Service`.
