@@ -13,7 +13,11 @@ Alkemio is about enabling open innovation, across all aspects of society. Connec
 
 Creating an open innovation platform is a pragmatic offering in the context of the wider vision: <i>"Enabling society to collaborate. Building a better future, together."</i>
 
-The core concept is a **Space**, combining a **topic you care about** with a **community** that wants to start making progress **towards** a new reality. But making progress in a hyper connected society is simply hard: there are typically multiple stakeholders that need to be involved. Hence out belief that a lot more innovation is needed in how we collaborate.
+The core concept is a **Space**, combining a 
+* **topic you care about** 
+* with a **community** 
+* that wants to start making progress **towards** a new reality. 
+But making progress in a hyper connected society is simply hard: there are typically multiple stakeholders that need to be involved. Hence out belief that a lot more innovation is needed in how we collaborate.
 
 There is plenty more to tell - so please do **[check out a more in-depth explanation of why we need to innovate in how we collaborate, and how we hope an open innovation platform can help.](./docs/why-alkemio.md)**. 
 
@@ -26,19 +30,16 @@ The Alkemio Platform is fully open source, and relies on a combination of core d
 
 For additional details on project partners and supporters please look at our [website](https://alkem.io). 
 
-## Connecting + Getting Help
-The best place to start is on our **[github discussions](https://github.com/alkem-io/alkemio/discussions)**. There you can raise ideas, ask for help, connect with others etc. 
+Alkemio is backed by **[Alkemio Foundation](https://alkemio.org)**. 
 
-If at any point you would like more information, or connect more directly to the team behind the platform, then please feel to reach out via <community@alkem.io>!
+Alkemio has implemented **[Steward Ownership](https://purpose-economy.org/en/)** to guarantee the purpose, for details please look at the **[structure overview](https://alkemio.org/structure). 
 
 ## How do I get started?
-The easiest way to get started with Alkemio is to see it in action! 
+The easiest way to get started with Alkemio is to see it in action! Please visit **[https://alkem.io](https://alkem.io)**.
 
-By far the easiest option is to register **[with the onlline platform](https://alkem.io)** and request a Space on the production environment.
+To try out a Space, please reach out via <community@alkem.io>!.  
 
-Or to explore please reach out via <community@alkem.io>!.  
-
-As Alkemio is open source, you can of course try it out locally. The documentation for his is as of Q2 2023 very out of date and a refresh is due, please contact us if you wish to have your own local setup. 
+As Alkemio is open source, you can of course try it out locally. The documentation for this is as of Q2 2024 out of date and a refresh is due, please contact us if you wish to have your own local setup. 
 
 ## How do I contribute to Alkemio?
 There is a huge amount to be done so all contributions are much appreciated! 
