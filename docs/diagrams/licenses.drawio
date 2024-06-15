@@ -1,10 +1,10 @@
-<mxfile host="Electron" modified="2024-05-02T08:17:41.317Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="vQc--l6fMfa0XhDK5rd5" version="24.2.5" type="device">
+<mxfile host="Electron" modified="2024-06-13T04:45:14.764Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.5.1 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="zSEKwYBiQdC6SvcgsyBA" version="24.5.1" type="device">
   <diagram name="License Framework" id="MRnfxQKDurDMuoabgHoY">
-    <mxGraphModel dx="2314" dy="1197" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1950" dy="1358" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-0" />
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-1" parent="dUI4cDzIz1VOxFGTC87Q-0" />
-        <mxCell id="dUI4cDzIz1VOxFGTC87Q-4" value="Alkemio Credential Based Authorization" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-4" value="Alkemio Credential Based Licensing" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
           <mxGeometry x="226" y="30" width="414.5" height="20" as="geometry" />
         </mxCell>
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-11" value="" style="group" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1" connectable="0">
