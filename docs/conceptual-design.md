@@ -4,6 +4,8 @@ This is a working document intended to capture key concepts and terminology that
 
 As these concepts are used throughout Alkemio, it is important for anyone new to Alkemio to be familiar with the contents of this document.
 
+**NOTE: This document is significantly out of date**
+
 # **Challenge: A dissatisfaction with the current reality**
 
 The central concept in Alkemio is the *Challenge* - a dissatisfaction with the current reality, around which multiple parties collaborate over a longer period of time to make progress.  

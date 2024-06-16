@@ -1,5 +1,7 @@
 # Alkemio - Technical Design Introduction
-This document provides an introduction to the technical design for Alkemio. It is assumed that the reader has already read the [Conceptual Design](./conceptual-design.md) document. 
+This document provides an introduction to the technical design for Alkemio. 
+
+It is assumed that the reader has already read the [Conceptual Design](./conceptual-design.md) document. 
 
 The architecture is described along the following posts:
 *   Design Principles
@@ -38,7 +40,7 @@ It is worth noting that some of these choices, especially regarding having an Or
 
 # Logical Data Model
 
-The goal of the Alkemio platform is to manage the shared representation of Subspaces and to faciliate collaboration within the context of those Subspaces. To support this, the platform has a *logical data model* for storing the shared representation and for facilitating the collaboration. 
+The goal of the Alkemio platform is to allow the creation of **Safe Spaces**, to facilitate collaboration within the context of those Spaces. To support this, the platform has a *logical data model* for storing the shared representation and for facilitating the collaboration. 
 
 The following diagram shows at a high level the key entities in use within Alkemio:
 
@@ -52,13 +54,12 @@ The key entities in the model are:
 *   **Space:**: The combination of the change to be achieved with the community contributing to that change, and collaboration towards the change. 
 *   **Community**:
     *   **User**: The primary way of interacting with the platform    
-    *   **UserGroup**: To allow the aggregation of users into groups, which may or may not have a focal point that is in charge of the group
     *   **Organization**: To reflect legal entities that interact with the platform via one or more users.   
+    *   **Virtual Contributor**: To allow safe interaction with AI services.   
 *   **Context**: The change to be achieved.
 *   **Collaboration**: 
     * **Callouts**: How to engage the members of a Community to get their wisdom on issues faced, solutions, others to engage, network etc.  
     * **Posts**: The posts to allow members to contribute
-    * **Relation**: an interaction to be tracked between two Users / Organizations / Groups related to a particular Subspace
 *   **Agents**: representing an entity in the platform in interactions with other entities. Entities with Agents include: Users, Organizations, Subspaces, Space etc. 
     * **Credentials**: a list of credentials held by the Agent. Important to note is that there are two types of credentials that can be associated with an Agent (a) simple credentials, which are managed by the platform (b) verified credentials, which are familiar W3C Verified Credentials. 
 *   **Authorization Policy**: representing the authorization rules that grant privileges to agents that are interacting with the entity.  
@@ -66,7 +67,7 @@ The key entities in the model are:
 
 In addition there are some key shared entities that are re-used across the domain model:
 * **Profile**: a shared entity across to represent Profiles in a consistent way. It manages tagsets, references, visuals, tagline, description of the entity, providing a flexible way to associated meta-information for the entity. 
-  * E.g. tagsets giving meta-data about the entity (e.g. industry, skill sets, intersts) and references for links related to the entity (e.g. website of an organization, linkedin profile for a user etc)
+  * E.g. tagsets giving meta-data about the entity (e.g. industry, skill sets, interests) and references for links related to the entity (e.g. website of an organization, linkedin profile for a user etc)
 
 There is also a *physical data model* that is how the logical data model is stored in the underlying datastore. However for using the system that should be hidden from normal usage.
 
@@ -108,7 +109,7 @@ The core sub-components for the platform are as follows:
 *   **Authentication**: for managing the authentication of Users that are interacting with the platform
 *   **Sql Storage**: for storing of databases, including the domain model from the Alkemio server, wallets from SSI, Communications and Identities. 
 *   **Communications**: for managing all communications happening between entities (e.g. community to user, user to user) in the platform
-*   **Self Sovereign Identities (SSI)**: for managing digital identies and wallets for Agents
+*   **Self Sovereign Identities (SSI)**: for managing digital identities and wallets for Agents
 
 All interactions with the Server are via the GraphQL api, which in turn relies on the Authentication services to ensure the acting Agent is identified.
 
