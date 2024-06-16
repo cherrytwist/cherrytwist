@@ -1,10 +1,10 @@
-<mxfile host="Electron" modified="2024-05-02T08:17:41.317Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="vQc--l6fMfa0XhDK5rd5" version="24.2.5" type="device">
+<mxfile host="Electron" modified="2024-06-16T06:54:40.820Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.5.3 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="DSimIa3IGs7_dyVSjI-H" version="24.5.3" type="device" pages="2">
   <diagram name="License Framework" id="MRnfxQKDurDMuoabgHoY">
-    <mxGraphModel dx="2314" dy="1197" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1111" dy="1677" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-0" />
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-1" parent="dUI4cDzIz1VOxFGTC87Q-0" />
-        <mxCell id="dUI4cDzIz1VOxFGTC87Q-4" value="Alkemio Credential Based Authorization" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-4" value="Alkemio Credential Based Licensing" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
           <mxGeometry x="226" y="30" width="414.5" height="20" as="geometry" />
         </mxCell>
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-11" value="" style="group" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1" connectable="0">
@@ -13,13 +13,13 @@
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-12" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" parent="dUI4cDzIz1VOxFGTC87Q-11" vertex="1">
           <mxGeometry width="247" height="383" as="geometry" />
         </mxCell>
-        <mxCell id="dUI4cDzIz1VOxFGTC87Q-13" value="&lt;b&gt;FeatureFlagRule&lt;/b&gt;&lt;br&gt;- Grant: WHITEBOARD_MULTI_USER&lt;br&gt;- FEATURE_FLAG_NAME: whiteboard-multi-user" style="rounded=1;whiteSpace=wrap;html=1;" parent="dUI4cDzIz1VOxFGTC87Q-11" vertex="1">
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-13" value="&lt;b&gt;LicenseCredentialRule&lt;/b&gt;&lt;br&gt;- Grant: WHITEBOARD_MULTI_USER&lt;br&gt;- Type: whiteboard-multi-user" style="rounded=1;whiteSpace=wrap;html=1;" parent="dUI4cDzIz1VOxFGTC87Q-11" vertex="1">
           <mxGeometry x="18.5" y="69" width="210" height="71" as="geometry" />
         </mxCell>
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-15" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;License Policy&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="dUI4cDzIz1VOxFGTC87Q-11" vertex="1">
           <mxGeometry x="23.5" y="15" width="200" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="dUI4cDzIz1VOxFGTC87Q-55" value="&lt;b&gt;FeatureFlagRule&lt;/b&gt;&lt;br&gt;- Grant: VIRTUAL_CONTRIBUTOR_ACCESS&lt;br&gt;- FEATURE_FLAG_NAME: virtual-contributors" style="rounded=1;whiteSpace=wrap;html=1;" parent="dUI4cDzIz1VOxFGTC87Q-11" vertex="1">
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-55" value="&lt;b&gt;LicenseCredentialRule&lt;/b&gt;&lt;br&gt;- Grant: VC_ACCESS&lt;br&gt;- Type: virtual-contributors" style="rounded=1;whiteSpace=wrap;html=1;" parent="dUI4cDzIz1VOxFGTC87Q-11" vertex="1">
           <mxGeometry x="15" y="299" width="210" height="71" as="geometry" />
         </mxCell>
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-57" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;fontSize=11;" parent="dUI4cDzIz1VOxFGTC87Q-11" edge="1">
@@ -49,13 +49,13 @@
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-44" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="dUI4cDzIz1VOxFGTC87Q-43" vertex="1">
           <mxGeometry width="237.00000000000003" height="393" as="geometry" />
         </mxCell>
-        <mxCell id="dUI4cDzIz1VOxFGTC87Q-46" value="&lt;b&gt;Fetaure Flag&lt;/b&gt;&lt;br&gt;- name: whiteboard-multi-user&lt;br&gt;- enabled: true" style="rounded=1;whiteSpace=wrap;html=1;" parent="dUI4cDzIz1VOxFGTC87Q-43" vertex="1">
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-46" value="&lt;b&gt;Credential1&lt;/b&gt;&lt;br&gt;- type: whiteboard-multi-user&lt;div&gt;- expires:&amp;nbsp;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="dUI4cDzIz1VOxFGTC87Q-43" vertex="1">
           <mxGeometry x="16.15909090909091" y="74.85714285714286" width="204.68181818181822" height="74.85714285714286" as="geometry" />
         </mxCell>
-        <mxCell id="dUI4cDzIz1VOxFGTC87Q-48" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;License&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="dUI4cDzIz1VOxFGTC87Q-43" vertex="1">
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-48" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;Account Agent&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="dUI4cDzIz1VOxFGTC87Q-43" vertex="1">
           <mxGeometry x="10.772727272727273" y="18.714285714285715" width="215.45454545454547" height="37.42857142857143" as="geometry" />
         </mxCell>
-        <mxCell id="dUI4cDzIz1VOxFGTC87Q-54" value="&lt;b&gt;Fetaure Flag&lt;/b&gt;&lt;br&gt;- name: virtual-contributors&lt;br&gt;- enabled: true" style="rounded=1;whiteSpace=wrap;html=1;" parent="dUI4cDzIz1VOxFGTC87Q-43" vertex="1">
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-54" value="&lt;b&gt;Credential2&lt;/b&gt;&lt;br&gt;- type: SPACE_FREE_PLAN&lt;br&gt;- expires:&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" parent="dUI4cDzIz1VOxFGTC87Q-43" vertex="1">
           <mxGeometry x="17.99909090909091" y="294.4245341614906" width="204.68181818181822" height="74.85714285714286" as="geometry" />
         </mxCell>
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-50" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" parent="dUI4cDzIz1VOxFGTC87Q-43" edge="1">
@@ -70,7 +70,7 @@
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-63" value="" style="group" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1" connectable="0">
           <mxGeometry x="338" y="483" width="183" height="136" as="geometry" />
         </mxCell>
-        <mxCell id="dUI4cDzIz1VOxFGTC87Q-60" value="&lt;br&gt;- Privilege Required: WHITEBOARD_MULTI_USER" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;" parent="dUI4cDzIz1VOxFGTC87Q-63" vertex="1">
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-60" value="&lt;br&gt;- Privilege Required: WHITEBOARD_MULTI_USER&lt;div&gt;or&amp;nbsp;&lt;/div&gt;&lt;div&gt;- Entitlement Required:&lt;/div&gt;&lt;div&gt;MEMBERS&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;" parent="dUI4cDzIz1VOxFGTC87Q-63" vertex="1">
           <mxGeometry width="183" height="136" as="geometry" />
         </mxCell>
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-61" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;Licensable action&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="dUI4cDzIz1VOxFGTC87Q-63" vertex="1">
@@ -96,11 +96,85 @@
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-68" value="&lt;font style=&quot;font-size: 18px&quot;&gt;There is a LicensePolicy that is applied, which has rules to determine when each Privelege is granted&lt;/font&gt;" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;strokeColor=#000000;" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
           <mxGeometry x="558" y="113" width="249" height="106" as="geometry" />
         </mxCell>
-        <mxCell id="dUI4cDzIz1VOxFGTC87Q-69" value="&lt;font style=&quot;font-size: 18px&quot;&gt;All Spaces operate within an Account, that has a License&lt;/font&gt;" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;strokeColor=#000000;" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
+        <mxCell id="dUI4cDzIz1VOxFGTC87Q-69" value="&lt;font style=&quot;font-size: 18px&quot;&gt;All Spaces operate within an Account, that has Credentials on an Agent&lt;/font&gt;" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;strokeColor=#000000;" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
           <mxGeometry x="70" y="113" width="235.5" height="102" as="geometry" />
         </mxCell>
         <mxCell id="dUI4cDzIz1VOxFGTC87Q-70" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Each action requires a type of License Privilege&lt;/font&gt;" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;strokeColor=#000000;" parent="dUI4cDzIz1VOxFGTC87Q-1" vertex="1">
           <mxGeometry x="332.25" y="113" width="202" height="105" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="pHeTqXf-PY4wl_YyXd9w" name="Logical Setup">
+    <mxGraphModel dx="819" dy="1236" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c3olkH4ifevDVTikjdGX-7" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="90" y="700" width="610" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="c3olkH4ifevDVTikjdGX-7">
+          <mxGeometry width="610.0000000000001" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-10" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;Common&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="c3olkH4ifevDVTikjdGX-7">
+          <mxGeometry x="27.72727272727273" y="10.952380952380953" width="554.5454545454546" height="21.904761904761905" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-9" value="&lt;div&gt;&lt;div&gt;&lt;b&gt;License Privileges&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-7">
+          <mxGeometry x="27.73" y="40.97" width="153.67" height="49.03" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-25" value="&lt;div&gt;&lt;div&gt;&lt;b&gt;License Credentials&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-7">
+          <mxGeometry x="200" y="40.97000000000003" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-26" value="&lt;div&gt;&lt;div&gt;&lt;b&gt;License Features&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-7">
+          <mxGeometry x="34.56999999999999" y="110" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-27" value="&lt;div&gt;&lt;div&gt;&lt;b&gt;License Engine&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-7">
+          <mxGeometry x="390" y="40" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-28" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="90" y="1000" width="610" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-29" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99FF99;strokeColor=#6c8ebf;" vertex="1" parent="c3olkH4ifevDVTikjdGX-28">
+          <mxGeometry width="610.0000000000001" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-30" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;Licensing Framework&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="c3olkH4ifevDVTikjdGX-28">
+          <mxGeometry x="27.72727272727273" y="16.19047619047619" width="554.5454545454546" height="32.38095238095238" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-31" value="&lt;b&gt;Plan: Space Free&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-28">
+          <mxGeometry x="50" y="75.97000000000003" width="153.67" height="49.03" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-32" value="&lt;div&gt;&lt;div&gt;&lt;b&gt;License Policy&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-28">
+          <mxGeometry x="222.5" y="65" width="165" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-34" value="&lt;div&gt;&lt;div&gt;&lt;b&gt;License Issuer&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-28">
+          <mxGeometry x="434.53999999999996" y="72.99" width="147.73" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-35" value="&lt;b&gt;Plan: Space Plus&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-28">
+          <mxGeometry x="50" y="145" width="153.67" height="49.03" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-36" value="&lt;b&gt;Plan: Space Premium&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-28">
+          <mxGeometry x="50" y="215.97000000000003" width="153.67" height="49.03" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-37" value="&lt;b&gt;Plan: Access VCs&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-28">
+          <mxGeometry x="50" y="280" width="153.67" height="49.03" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-38" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="790" y="1000" width="240" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-39" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFF99;strokeColor=#6c8ebf;" vertex="1" parent="c3olkH4ifevDVTikjdGX-38">
+          <mxGeometry x="-2.18" width="242.18" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-40" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;Account&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="c3olkH4ifevDVTikjdGX-38">
+          <mxGeometry x="57.5" y="10.96774193548387" width="140" height="35.513548387096776" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-42" value="&lt;div&gt;&lt;div&gt;&lt;b&gt;Agent&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#D5E8D4;" vertex="1" parent="c3olkH4ifevDVTikjdGX-38">
+          <mxGeometry x="36.40999999999997" y="65.80645161290322" width="165" height="246.77419354838707" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-41" value="&lt;b&gt;Credential: Space Free&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-38">
+          <mxGeometry x="52.989999999999895" y="120.64516129032258" width="131.83" height="43.87096774193548" as="geometry" />
+        </mxCell>
+        <mxCell id="c3olkH4ifevDVTikjdGX-44" value="&lt;b&gt;Credential: Member Pack&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c3olkH4ifevDVTikjdGX-38">
+          <mxGeometry x="48.65000000000009" y="185.3548387096774" width="136.17" height="46.07548387096774" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
