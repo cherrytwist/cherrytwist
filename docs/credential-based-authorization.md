@@ -40,12 +40,14 @@ There are multiple credential types in use within Alkemio. Note that in the text
 
 ### **Global Roles**
 These credentials do not have a resource ID specified as they are applicable regardless of context. 
+
+Example global roles:
 * _RegisteredUser_: for users that are registered on the platform
 * _GlobalAdmin_: for the platform administrators, including management of global credentials
-* _GlobalAdminSpaces_: for platform administration of Spaces
-* _GlobalAdminCommunity_: for platform administration of contributors
+* _GlobalSupport_: for users providing platform support
+* _GlobalLicenseManager_: for users managing License assignments on Allkemio
 
-Note that the root role is Global Admin, which is able to manage the other global roles (Global Admin Spaces, Global Admin Community) and is a pure superset of the privileges assigned to those roles. The expected usage is that there is a small set of Global Admins, with potentially a larger set of Global Admin Spaces that facilitate usage of the platform by helping Space Admins.  
+Note that the root role is Global Admin, which is able to manage the other global roles (Global Support, Global License Manager) and is a pure superset of the privileges assigned to those roles. The is a small set of Global Admins, with  a larger set of Global Support users that facilitate usage of the platform by helping Space Admins.  
 
 ### **Context Dependent Roles**
 These are roles that are specific to a context (resourceID) on the platform. Some of the roles are only applicable to e.g. Organizations, but others are applicable to both Users and Organizations. In that case we use the term Contributor.
@@ -53,10 +55,9 @@ These are roles that are specific to a context (resourceID) on the platform. Som
 Example roles: 
 * _AccountHost_: to identify a Contributor as being a Host of an Account. 
 * _SpaceMember_: to identify a Contributor as being a Member of a Space
-* _SpaceAdmin_: to identify a User as being an Admin of an Space
-* _SubspaceMember_: to identify a Contributor as being a Member of a Subspace
-* _SubspaceLead_: to identify a Contributor as being aa Lead of a Subspace
-* _SubspaceAdmin_: to identify a User as being aa Admin of a Subspace
+* _SpaceLead_: to identify a Contributor as being aa Lead of a Space
+* _SpaceAdmin_: to identify a Contributor as being an Admin of an Space
+* _SubspaceAdmin_: to identify a Contributor as being an Admin of a Subspace
 * _UserSelfManagement_: to identify the User as being able to manage their own Profile
 
 An example: consider a User that holds the following Credential:
@@ -68,7 +69,7 @@ This User is then a member of Subspace6, but clearly is *not* a member of Subspa
 ### **Relationships**
 In addition, some key relations are also represented by Credentials. Whilst currently these credentials are used to manage relationships, it is expected that near term that these credentials will also enable certain actions on the platform. 
 * _AccountHost_: when held by an Organization, it is used to identify that they are the host for a particular set of Spaces in an Account
-* _SubspaceLead_: held by an Organization to identify that they are the host for a particular Subspace.
+* _SpaceLead_: held by an Organization to identify that they are the Lead for a particular Space.
 
 ## **AuthorizationPolicy**
 Each entity upon which a User can carry out action on the Alkemio platform has associated with it an AuthorizationPolicy. Each AuthorizationPolicy contains a set of **rules** that determine what Privileges are granted to a particular agent. The set of rule types include:
@@ -130,7 +131,17 @@ _Case 2_:  The User wishes to update the definition of Subspace 7.
 - The execution of the request to update the Subspace passes both the Credentials held by the User and the Authorization Policy to the AuthorizationEngine, together with the required privilege: "UPDATE"
 - The AuthorizationEngine evaluates the request and returns false.
 
+<p align="center">
+<img src="images/security-authorization-meme1.png" alt="Alkemio Authorization Meme" width="300" />
+</p>
+
 ## Populating Authorization Policies
+The Authorization Policies are **generated**. The generation of the AuthorizationPolicy for a particular _Authorizable_ entity takes into account 
+a) the AuthorizationPolicy for the parent (containing) entity, 
+b) any settings on the entity that are relevant for authorization
+
+The generation of the AuthorizationPolicy is a specific action that is carried out, for example if the settings on a Space are changed or if a new release is deployed. 
+
 The Authorization Policy for each _Authorizable_ entity is cascaded through the containment hierarchy.
 
 There is a root level Platform Authorization Policy.

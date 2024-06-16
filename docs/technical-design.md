@@ -161,6 +161,16 @@ Essentially upon a User authenticating, the following happens:
 
 Worth noting that this approach also allows for Credentials to be later held outside of the platform e.g. the user holds their own wallet and manages their own credentials. The ideal scenario for Users is that ultimately they can have their own SSI that can then control the Agents managed by the platform - or replace the platform Agents. 
 
+## Licensing: Credentials
+All Licensing within the Alkemio platform is also based on Credentials. This section will provide a high level overview of this approach. For additional details please [read this document](./licensing.md).
+
+<p align="center">
+<img src="images/licensing-framework.png" alt="Licensing Framework" width="600" />
+</p>
+
+Essentially when a User wishes to carry out an action / access functionality that is Licensed, the following happens:
+* The platform retrieves the Agent for the Account within whose scope the action is taking place
+* The Credentials held by that Agent are used to decide if the requested action (e.g. Add another member, create a virtual contributor etc) is Licensed. 
 
 # Templates
 A key design goal for Alkemio is the sharing of best practices, so the platform needs to be customizable. This is achieved with Templates.
@@ -168,10 +178,11 @@ A key design goal for Alkemio is the sharing of best practices, so the platform 
 Templates support is high up the backlog for the platform, as it is important that key entities (e.g. Space, Subspace, Subspace, Project etc) can be instantiated based on a particular template. 
 
 Key areas where we expect that templates support will be useful include:
-* Lifecycles: what is the lifecycle (also sometimes referred to as process) that your entities should follow? What do each of the states mean? What actions should be triggered e.g. if a Subspace is approved?
+
 * Posts: what are the key posts for a Subspace / Subspace that need to be captured within a given Subspace / Subspace?
 * Community: what type of community do you intend to create? What User groups make sense?
 * Whiteboards: what collaboration canvases should be available and what is the goal of each canvas?
+* Innovation Flows: what is the lifecycle (also sometimes referred to as process) that your entities should follow? What do each of the states mean? What actions should be triggered e.g. if a Subspace is approved?
 * (later) what are custom credentials / actions that can be carried out within a particular context?
 
 The management of Templates needs to be both at the global level (global catalog), as well as locally controllable i.e. that a Space can provide a defined set of options (e.g. what Lifecycles can be used).
@@ -202,7 +213,6 @@ Each NameID is unique within a certain scope. The following table shows which en
 | Space   | Global amongst Spaces        |
 | Subspace   | Within containing Space         |
 | Subspace   | Within containing Space         |
-| Project   | Within containing Space         |
 
 Notes:
 * This implies that within a particular Space that the NameIDs for all Subspaces, Opportunities and Projects need to be unique. 

@@ -40,7 +40,7 @@ To create a VC, access needs to be provided to an AI service.
 To make getting started with Virtual Contributors straightforward, Alkemio also provides the ability to easily create AI services.
 
 ### Provider
-Each VC is created within an Account on Alkemio. Each Account on Alkemio has either a Host user or organization. The Host User or Organization is then the **provider** of the VC.
+Each VC is created within an Account on Alkemio. Each Account on Alkemio has either a Host user or organization. The Host User or Organization is then the **pProvider** of the VC.
 
 ### Visibility
 A VC has the following visibility modes:
@@ -68,13 +68,19 @@ The following information is associated with a VC:
 * **Response types**: The types of responses that can be provided by the AI behind the VC. 
     * For now the only option is "Text". 
 
-In addition the provider of the VC (user, organization), is also displayed. 
+In addition the provider of the VC (user, organization) is also displayed. 
 
 Finally, to create additional trust in the VC, the roadmap includes the ability for attestions to be attached to a VC. This leverages credentials (signed) to allow multiple levels of information to be attached. Examples could include:
 * Trusted by organizations
 * Certifications (think along the lines of a movie age rating), for aspects such as biases.
 ....
 
+## **AI Services**
+The AI services that are used are logically *separate from the Alkemio platform*. 
+
+However there are already services, as well as the ability to create new services, that have been identified and implemented - below are more details.
+
+The chosen logical model is to allow many external AI services to be plugged in and used safely on Alkemio. 
 
 ## **Alkemio AI Service Creators**
 The following capabilities for creating AI services are provided by Alkemio.
@@ -113,19 +119,28 @@ For spaces (and subspaces) within the Account, the VC can be directly added.
 ### Public VC + invitation
 When a VC is public, it can be **invited** to become a member of any Space on Alkemio. 
 
-The Space that wishes to use the specific VC needs to find the VC to be invited. There are two options for this:
-* **Browse the Alkemio Store**: by far the easiest, but it does require the VC provider to have also chosen for the VC to be in the store.
-* **Invitation via VC profile link**: Each VC has a profile page associated with it. If the link to the profile of the VC is shared then this can be used to invite the VC.
-
-Once the VC is invited, then the provider of the VC will be notified of the invitation. The provider then has the option to accept or reject the invitation.
-
+The key steps in this flow are shown below:
 <p align="center">
 <img src="images/ai-virtual-contributors-flow-invite-vc-space-member.png" alt="Flow to invite VC to become a member of a Space" width="600" />
 </p>
 
 
+**Finding the VC**
+The Space that wishes to use the specific VC needs to find the VC to be invited. There are two options for this:
+* **Browse the Alkemio Store**: by far the easiest, but it does require the VC provider to have also chosen for the VC to be in the store.
+* **Invitation via VC profile link**: Each VC has a profile page associated with it. If the link to the profile of the VC is shared then this can be used to invite the VC.
 
-Note: the question of "payment" for being able to interact with a VC as a member in a Space is one that is still being explored. The ideal scenario is that this payment can be facilitated via the platform, the alternative is to make a separate out of band agreement.
+**Inviting the VC**
+Once the VC is found, the inviter then can view the profile of the VC - and importantly make choices related to the membership that is being offered. In particular:
+* Interaction mode: what type of interactions should the VC have as a contributor in the space?
+* Context awareness: how much of the environment in which the VC is a member should be shared with the VC? The more context the more situational awareness the VC has when providing responses / acting.
+* Role: is there a particular role the VC should have, beyond member, in the community?
+
+**Acccepting the invitation**
+Once the invitation is sent, the provider of the VC will be notified of the invitation. The provider then has the option to accept or reject the invitation.
+
+**Payment**
+The question of "payment" for being able to interact with a VC as a member in a Space is one that is still being explored. The ideal scenario is that this payment can be facilitated via the platform, the alternative is to make a separate out of band agreement.
 
 ### Removing memberships
 At any time the provider of a VC can choose to remove the VC as an active member of a Space community. 
@@ -145,13 +160,11 @@ If the User starts a new top level tagging, then a new chat history is created w
 If the User replies to the response from the VC, then the conversation is threaded i.e. the User can add additional context / instructions to shape the response. 
 
 
-
 ## Roadmap
 There are many dimensions to expand the VC capability on Alkemio. 
 
 ### Ineraction Modes
-Allowing the VC to be used separate from a question + response approach. 
-
+Allowing the VC to be used separate from a question + response approach. For example that the VC has agency and can without being prompted contribute e.g. provide a weekly summary of the space activity. 
 
 ### Additional Interactions patterns with VCs
 This is about providing acdditional modes for Users to interact with a VC:
