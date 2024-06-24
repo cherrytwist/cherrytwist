@@ -3,41 +3,43 @@ This document provides a conceptual explanation of how AI is leveraged on the Al
 
 ## Virtual Contributors
 
-The high level conceptual model for usage of AI to power Virtual Contributors on Alkemio is shown below. 
+The high level conceptual model for how Virtual Contributors leverage the power of AI Personas on Alkemio is shown below. 
 <p align="center">
 <img src="images/ai-virtual-contributors-conceptual-model.png" alt="AI Virtual Contributors Conceptual Model" width="600" />
 </p>
 
 A **Virtual Contributor** allows usage of an AI service as a contributor on Alkemio. 
 
-An **AI Service** provides access to an AI powered capability e.g. Legal expert, community manager etc. 
+An **AI Persona Service** provides access to an AI powered capability that acts or can act in a natural way e.g. Legal expert, community manager etc. The AI Persona services are logically external to the Alkemio server. 
 
-Logically the AI service should be thought of as being outside of Alkemio. 
-
-However Alkemio also does provide the ability to easily create and work with AI services that are specific to the type of data or roles on Alkemi0. 
+Alkemio does also provide a set of AI Persona Services, via the **ALkemio AI Server**, offering then the ability to easily create and work with AI services that are specific to the type of data or roles on Alkemio. 
 
 ## Benefits of Virtual Contributors 
-* Provide transparency on the remote AI service
-    * What capability is it providing?
-    * What type of LLM is behind it?
-    * What organization is providing it?
-    * What knowledge does it have?
-    * What type of interaction modes, as well as agency, can it have?
-    * What awareness does it need to have when used?
-* Allow for reputation and attestations on the VC
-* Allow for the context, where a VC is being used, to be automatically provided to the VC
-    * This would be for example by allowing differing levels of information about the Space (where the VC is operating) to be sent along with the question.
-* Allow for many-to-many interactions with VCs
-    * This is in sharp contrast to the typical one to one interaction that happens with an AI service (e.g. ChatGPT)
+In essence, there are two core benefits for using VCs on Alkemio: 
+* Improved collaboration with AI
+    * Allow for the VC to be seamlessly integrated into your communities, providing direct access to powerful capabilities in a natural way.
+    * Allow for many-to-many interactions with VCs
+        * This is in sharp contrast to the typical one to one interaction that happens with an AI service (e.g. ChatGPT)
+    * Allow for the context, where a VC is being used, to be automatically provided to the VC
+    *   This would be for example by allowing differing levels of information about the Space (where the VC is operating) to be sent along with the question.
+    * Eventually a Virtual Contributor should be able to build up a reputation. 
+* Trust framework around the AI Persona
+    * Provide transparency on the AI Personas
+        * What capability is it providing?
+        * What type of LLM is behind it?
+        * What organization is providing it?
+        * What knowledge does it have?
+        * What type of interaction modes, as well as agency, can it have?
+        * What awareness does it need to have when used?
+    * Allow for reputation and attestations on the AI Persona
+    ==> The underlying model to keep in mind is that of a normal user: what knowledge does that person have? What can they do? 
 
-Eventually a Virtual Contributor should be able to build up a reputation. 
+To support this mental model, the AI Persons Trust Framework **should not** be modified after the VC is made available.
 
-The underlying model to keep in mind is that of a normal user. What knowledge does that person have? What can they do? 
-
-To support this mental model, many aspects of a VC **cannot** be modified after the VC is made available.
+Finally, by having AI Persona services as described below, Alkemio also enables the data stored in an Alkemio Space to be easily shared with other Spaces on Alkemio - making it much easier to share knowledge across communities. 
 
 ## **Creating a Virtual Contributor (VC)**
-To create a VC, access needs to be provided to an AI service.
+To create a VC, access needs to be provided to an AI Persona service.
 
 To make getting started with Virtual Contributors straightforward, Alkemio also provides the ability to easily create AI services.
 
@@ -77,20 +79,19 @@ Finally, to create additional trust in the VC, the roadmap includes the ability 
 * Certifications (think along the lines of a movie age rating), for aspects such as biases.
 ....
 
-## **AI Services**
-The AI services that are used are logically *separate from the Alkemio platform*. 
+## **Alkemio AI Server**
+Alkemio also provides a set of AI capabilities, including AI Persona Services, that support or leverage the Alkemio platform. 
 
-However, there are already services, as well as the ability to create new services, that have been identified and implemented - below are more details.
+These AI services are logically *separate from the Alkemio platform*, and are provided by the **Alkemio AI Server**. Details of the initial set of services are below. 
 
-The chosen logical model is to allow many external AI services to be plugged in and used safely on Alkemio. 
+The rational for having a separate logical Alkemio AI Server is that the mechanisms used to plug in these services should be similar to those used to safely plug in and use third party AI Personas. 
 
-## **Alkemio AI Service Creators**
-The following capabilities for creating AI services are provided by Alkemio.
+There are two categories of services provided by the Alkemio AI Server: a) AI Personas b) AI services.
 
-### Space Expert Creator
-This AI service allows you to create a "Space <abcd> Expert" AI service, allowing interaction with the contents of a Space. The contents of the specified Space, including files that are uploaded as links, are converted into a *Body of Knowledge*.
+### AI Persona: Space Expert Creator
+This AI service allows you to create a "Space <abcd> Expert" AI Persona, allowing interaction with the contents of a Space. The contents of the specified Space, including files that are uploaded as links, are converted into a *Body of Knowledge*.
 
-This AI service makes it easy to create In essence it is allowing the easy creation of an AI expert on a body of knowledge you control.
+This AI Persona service makes it easy to create an AI Persona expert on a body of knowledge you control.
 
 The Space Expert is created by specifying a particular Space on Alkemio as the source body of knowledge. It hopefully goes without saying that the user creating the Space Expert needs to have the rights / permissions to be able to share the contents of the specified Space.  
 
@@ -103,14 +104,12 @@ The detailed flow for creating a new VC based on an instance of the Space Expert
 <img src="images/ai-virtual-contributors-flow-create-vc-space-expert.png" alt="Flow to create a new VC using an instance of the Space Expert AI service" width="600" />
 </p>
 
-
-## **Alkemio AI Services**
-The following dedicated AI services are provided by Alkemio:
-
-### Alkemio Help
+### **AI Service: Alkemio Help
 This AI service has access to all information stored on the public Alkemio websites (https://welcome.alkem.io, https://alkemio.org) - including Alkemio help contents. 
 
-## Using a VC within a Space
+
+
+## **Using a VC within a Space**
 Once a VC is created, the next step is to use that VC as a contributor in one or more communities.
 
 ### Private VC + addition
