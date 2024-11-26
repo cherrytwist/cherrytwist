@@ -1,8 +1,9 @@
 ---
 name: Epic
-about: A theme of work that contain sub-tasks required to complete the larger goal / larger user-story
+about: A theme of work that contain sub-tasks required to complete the larger goal
+  / larger user-story
 title: ''
-labels: ''
+labels: Align Z-GP, Epic
 assignees: ''
 
 ---
@@ -25,4 +26,3 @@ _Describe who needs to be kept up-to-date about this Epic, included in discussio
 ## Design
 Figma file:
 _Comments are highly appreciated. When commenting in Figma, please also leave a note in the comments box below this issue to notify us_
-
